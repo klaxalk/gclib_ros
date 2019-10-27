@@ -1,0 +1,12 @@
+publisher_rate: 10.0 # [Hz]
+
+n_stages: 2
+
+steps2unit: [12500, 12500]
+
+speed: [2500, 2500]
+acceleration: [2500, 2500]
+deceleration: [2500, 2500]
+
+forward_limit: [100000, 100000]
+backward_limit: [-100000, -100000]

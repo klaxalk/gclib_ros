@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="dummy" default="true" />
+
+  <node name="gclib" pkg="gclib_ros" type="gclib_node.py" output="screen">
+
+    <rosparam file="$(find gclib_ros)/config/default.yaml" command="load" />
+
+    <param name="address" value="--address /dev/ttyUSB4 --handshake NONE --baud 19200" />
+    <param name="dummy" value="$(arg dummy)" />
+
+      <!-- advertised topics -->
+    <remap from="~position_out" to="~position" />
+
+  </node>
+
+</launch>
