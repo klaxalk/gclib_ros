@@ -28,6 +28,7 @@ add_service_files(DIRECTORY srv FILES
 
   SingleAxisMotion.srv
   MultiAxisMotion.srv
+  SetFloat.srv
   )
 
 ## Generate added messages and services with any dependencies listed here

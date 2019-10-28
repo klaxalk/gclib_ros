@@ -1,6 +1,7 @@
 <launch>
 
   <arg name="dummy" default="true" />
+  <arg name="debug" default="false" />
 
   <node name="gclib" pkg="gclib_ros" type="gclib_node.py" output="screen">
 
@@ -8,6 +9,7 @@
 
     <param name="address" value="--address /dev/ttyUSB4 --handshake NONE --baud 19200" />
     <param name="dummy" value="$(arg dummy)" />
+    <param name="debug" value="$(arg debug)" />
 
       <!-- advertised topics -->
     <remap from="~position_out" to="~position" />
