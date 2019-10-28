@@ -44,24 +44,24 @@ catkin_package(
    CATKIN_DEPENDS roscpp std_msgs geometry_msgs rospy std_msgs message_runtime message_generation
 )
 
-############
-### Build ##
-############
+###########
+## Build ##
+###########
 
-### Specify additional locations of header files
-### Your package locations should be listed before other locations
-## include_directories(include)
-#include_directories(
-#  ${catkin_INCLUDE_DIRS}
-#  )
+## Specify additional locations of header files
+## Your package locations should be listed before other locations
+# include_directories(include)
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  )
 
-#add_library(gclib_ros src/main.cpp)
+add_library(gclib_ros src/main.cpp)
 
-#add_dependencies(gclib_ros
-#  ${${PROJECT_NAME}_EXPORTED_TARGETS}
-#  ${catkin_EXPORTED_TARGETS}
-#  )
+add_dependencies(gclib_ros
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+  ${catkin_EXPORTED_TARGETS}
+  )
 
-#target_link_libraries(gclib_ros
-#  ${catkin_LIBRARIES}
-#  )
+target_link_libraries(gclib_ros
+  ${catkin_LIBRARIES}
+  )
