@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="dummy" default="true" />
+  <arg name="dummy" default="false" />
   <arg name="debug" default="false" />
 
   <node name="gclib" pkg="gclib_ros" type="gclib_node.py" output="screen">
